@@ -20,9 +20,7 @@ data "aws_iam_policy_document" "lambda_policy" {
   statement {
     effect = "Allow"
     actions = [
-      "s3:GetObject",
-      "s3:ListBucket",
-      "s3:PutObject",
+      "s3:*",
     ]
     resources = [
       module.ingest_s3.s3_bucket_arn,
